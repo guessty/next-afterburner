@@ -1,0 +1,34 @@
+{
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "functions": {
+    "source": "dist/functions",
+    "predeploy": [
+      "npm run lint-functions",
+      "npm run lint-app",
+      "npm run typecheck-app",
+      "npm run build-all",
+      "npm run copy-deps",
+      "npm run install-deps"        
+  ]
+  },
+  "hosting": {
+    "public": "dist/public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**/**",
+        "function": "nextApp"
+      }
+    ]
+  },
+  "storage": {
+    "rules": "storage.rules"
+  }
+}
