@@ -26,7 +26,8 @@
         "source": "**/**",
         "function": "nextApp"
       }
-    ]
+    ],
+    "predeploy": "npm run build-public"
   },
   "storage": {
     "rules": "storage.rules"
