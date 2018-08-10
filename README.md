@@ -1,6 +1,6 @@
 # next-firebase-starter
 
-**The project is based on a few of the next examples but setup with my own configuration**
+**The project is based on a few of the next examples but set up for my own needs.**
 
 A starter kit for working with NextJS and Firebase (Hosting, Cloud Functions, Firestore, and Storage) with baked in support for TypeScript.
 
