@@ -1,12 +1,12 @@
-const functionRoutes = require('./../../functions/src/routes').default;
+const ssrRoutes = require('./../../functions/src/config/routes').default;
 
-const staticRoutes = [
-  { name: 'home', pattern: '/', page: '/'},
-  { name: 'a', pattern: '/a', page:'/a' },
-  { name: 'b', pattern: '/b', page:'/b' }
+const clientRoutes = [
+  { name: 'home', pattern: '/', page: '/', prerender: true },
+  { name: 'a', pattern: '/a', page:'/a', prerender: true },
+  { name: 'b', pattern: '/b', page:'/b', prerender: true }
 ];
 
-module.exports = {
-  staticRoutes,
-  functionRoutes
-};
+module.exports = [
+  ...clientRoutes,
+  ...ssrRoutes
+];

@@ -1,9 +1,11 @@
 const withTypescript = require('@zeit/next-typescript');
-const staticRoutes = require('./config/routes').staticRoutes;
 //
+const routes = require('./config/routes');
 
-const staticPathMap = staticRoutes.reduce((pathMap, route) => {
-  pathMap[route.pattern] = { page: route.page }
+const staticPathMap = routes.reduce((pathMap, route) => {
+  if (route.prerender) {
+    pathMap[route.pattern] = { page: route.page }
+  }
   return pathMap;
 }, {});
 
