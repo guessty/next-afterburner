@@ -13,6 +13,7 @@ SSR routes are added in `src/functions/src/config/routes`. Add routes here if yo
 *Todo*
 1) Add testing
 2) Improve routing
-3) Add in redux
-4) Provide out of the box support for firebase authentication with sign in/up forms
+3) Emulate cloud functions in dev env
+4) Add in redux
+5) Provide out of the box support for firebase authentication with sign in/up forms
 
