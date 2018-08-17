@@ -2,7 +2,7 @@ import * as functions from 'firebase-functions';
 import * as next from 'next';
 const router = require('next-routes')();
 //
-import routes from './config/routes';
+const routes = require('./config/routes');
 
 routes.forEach((route) => {
   router.add(route.name, route.pattern, route.page);

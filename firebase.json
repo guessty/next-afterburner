@@ -1,15 +1,16 @@
 {
   "firestore": {
-    "rules": "firestore.rules",
-    "indexes": "firestore.indexes.json"
+    "rules": "config/firebase/firestore.rules",
+    "indexes": "config/firebase/firestore.indexes.json"
+  },
+  "storage": {
+    "rules": "config/firebase/storage.rules"
   },
   "functions": {
     "source": "dist/functions",
     "predeploy": [
-      "npm run lint-functions",
-      "npm run lint-app",
-      "npm run typecheck-app",
-      "npm run build-all",
+      "npm run build-app",
+      "npm run build-functions",
       "npm run copy-deps",
       "npm run install-deps"        
   ]
@@ -27,9 +28,9 @@
         "function": "nextApp"
       }
     ],
-    "predeploy": "npm run build-public"
-  },
-  "storage": {
-    "rules": "storage.rules"
+    "predeploy": [
+      "npm run build-app",
+      "npm run build-public"
+    ]
   }
 }
