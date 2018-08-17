@@ -7,22 +7,17 @@
   "scripts": {
     "start": "cd \"src/app\" && nodemon dev-server/index.ts",
     
-    "lint-app": "tslint --project src/app",
-    "typecheck-app": "tsc --project src/app",
-    "test-app": "yarn lint-app && yarn typecheck-app && jest",
-    "build-app": "yarn lint-app && yarn typecheck-app && cd \"src/app\" && next build",
-    "build-public": "next export \"./src/app\" -o \"./dist/public\"",
+    "lint": "tslint --project src/app && tslint --project src/functions",
+    "test": "jest",
 
-    "lint-functions": "tslint --project src/functions",
-    "copy-routes": "cpx \"*{dist/temp/config/routes.js,dist/temp/confing/routes.js.map\" \"dist/functions/config\"",
-    "build-functions": "yarn lint-functions && tsc --project src/functions && yarn copy-routes",
+    "build-app": "cd \"src/app\" && next build",
+    "build-public": "next export \"./src/app\" -o \"./dist/public\"",
+    "build-functions": "tsc --project src/functions && tsc --project src/app && cpx \"dist/tmp/router/*.*\" \"dist/functions/router\"",
+    "build": "yarn lint && yarn test && yarn build-app && yarn build-public && yarn build-functions",
 
     "copy-deps": "cpx \"*{package.json,package-lock.json,yarn.lock}\" \"dist/functions\"",
     "install-deps": "cd \"dist/functions\" && npm i",
-    
-    "test": "jest",
-    "build-all": "yarn build-functions && yarn build-public",
-    "deploy": "firebase deploy"
+    "deploy": "yarn lint && yarn test && firebase deploy"
   },
   "dependencies": {
     "firebase-admin": "~5.13.0",

@@ -1,5 +1,5 @@
 const nextRoutes = require('next-routes');
-const routes = require('./config/routes');
+const routes = require('./routes');
 //
 const router = module.exports = nextRoutes();
 

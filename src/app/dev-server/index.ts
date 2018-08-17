@@ -10,10 +10,13 @@ const app = next({ dev, conf: config })
 const handler = router.getRequestHandler(app)
 
 app.prepare()
-.then(() => {
-  createServer(handler)
-  .listen(port, (err) => {
-    if (err) throw err
-    console.log(`> Ready on http://localhost:${port}`)
+  .then(() => {
+    createServer(handler)
+    .listen(port, (err) => {
+      if (err) throw err
+      console.log(`> Ready on http://localhost:${port}`)
+    })
   })
-})
+  .catch((error) => {
+    console.log('error', error)
+  })

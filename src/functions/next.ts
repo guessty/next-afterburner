@@ -1,18 +1,13 @@
-import * as functions from 'firebase-functions';
-import * as next from 'next';
-const router = require('next-routes')();
-//
-const routes = require('./config/routes');
+import * as functions from 'firebase-functions'
+import * as next from 'next'
 
-routes.forEach((route) => {
-  router.add(route.name, route.pattern, route.page);
-});
+const router = require('./router')
 
-const dev = process.env.NODE_ENV !== 'production';
-const app = next({ dev, conf: { distDir: 'next' } });
-const handler = router.getRequestHandler(app);
+const dev = process.env.NODE_ENV !== 'production'
+const app = next({ dev, conf: { distDir: 'next' } })
+const handler = router.getRequestHandler(app)
 
 export const nextApp = functions.https.onRequest((request, response) => {
-  console.log('File: ' + request.originalUrl); // eslint-disable-line no-console
-  return app.prepare().then(() => handler(request, response));
-});
+  console.log('File: ' + request.originalUrl) // eslint-disable-line no-console
+  return app.prepare().then(() => handler(request, response))
+})
