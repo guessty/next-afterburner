@@ -6224,9 +6224,9 @@ react-dom@^16.4.2:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
-react-grid-flexbox@^0.6.0:
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/react-grid-flexbox/-/react-grid-flexbox-0.6.0.tgz#e7c7ce565def5c54a74eaef4b470ddd350394f57"
+react-grid-flexbox@^0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/react-grid-flexbox/-/react-grid-flexbox-0.6.1.tgz#62d9d11078fac94c02ae3f87453c1fdbf398ec93"
   dependencies:
     hoek "^5.0.3"
     prop-types "^15.6.2"

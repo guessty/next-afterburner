@@ -38,29 +38,33 @@ The stack choices and configuration are shamelessly based on personal preference
 
 ** It should go without saying that a Firebase account is required for you to be able to work with this project **
 
-1) Prerender pages by default with support for dymanic SSR pages if needed (NextJS, Firebase Hosting and Cloud Functions).
+### Prerender pages by default with support for dymanic SSR pages if needed (NextJS, Firebase Hosting and Cloud Functions).
 
 Statically exported pages are great when it comes to speed of access and cost of hosting. For this reason the project is configured to export static pages by default and you can deploy to Firebase Hosting with a single command.
 
 If your site starts to get a bit more complicated and you find certain pages have dynamic content, you can opt to skip prerendering of those pages and push the rendering to Cloud Functions. A preconfigured Cloud Function will then spin up a server and render those pages on the fly preserving any SEO goodness.
 
-2) User Sign Up/Authentication by default (Redux, Firebase Authentication)
+### User Sign Up/Authentication by default (Redux, Firebase Authentication)
 
 User sign up and login is handled by Firebase Authentication and enabled by default.
 
 Authentication is restricted to Social Sign In using a Google account. This could easily be extended to supporte the traditional login or other social logins if needed.
 
-3) Store data and images with ease (Firebase Storage and Firestore)
+### Store data and images with ease (Firebase Storage and Firestore)
 
 Preconfigured to work from the client. Add your rules and you're good to go.
 
-4) Application State (Redux)
+### Application State (Redux)
 
 There if you need it.
 
+### Testing and Linting (Jest & Enzymne)
+
+All testing is confgured and ready to go.
+
 ## To Do
 
-1) Add testing
+1) ~~Add suppprt for testing~~
 2) ~~Improve routing~~
 3) Emulate cloud functions in dev env
 4) ~~Add in redux~~
