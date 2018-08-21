@@ -1,8 +1,7 @@
 const routes = [
-  { name: 'home', pattern: '/', page: '/', prerender: true },
-  { name: 'a', pattern: '/a', page:'/a', prerender: false },
-  { name: 'b', pattern: '/b', page:'/b', prerender: true },
-  { name: 'ba', pattern: '/b/:slug', page: '/a' }
+  { name: 'home', pattern: '/', page: '/' },
+  { name: 'about', pattern: '/about', page:'/about' },
+  { name: 'ssr', pattern: '/ssr/:slug', page: '/ssr', prerender: false }
 ];
 
 module.exports = routes;

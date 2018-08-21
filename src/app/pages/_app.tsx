@@ -14,9 +14,13 @@ injectGlobal`
   ${styledSanitize}
   html {
     font-size: 62.5%;
+    overflow-x: hidden;
   }
   body {
     font-size: 1.6rem;
+  }
+  *, :before, :after {
+    margin: 0;
   }
 `
 
