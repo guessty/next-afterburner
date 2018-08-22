@@ -22,6 +22,12 @@ This project provides you with the necesseary stack and configuration to get you
 
 The stack choices and configuration are shamelessly based on personal preference and built to get the job done.
 
+## Installation
+
+1) `yarn global add create-next-firestack`
+
+2) `create-next-firebase <my-app>`
+
 ## The Stack
 
 1) TypeScript
