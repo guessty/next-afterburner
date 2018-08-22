@@ -4,9 +4,9 @@ A highly opinionated boilerplate for rapid development of production sites using
 
 ## The Problem
 
-It's 2018 and JavaScript development had never been so productive.
+It's 2018 and JavaScript development has never been so productive.
 
-Cloud architecture is awesome and hosting a site has never been simpler.
+Cloud architecture is awesome and hosting a site is super simple.
 
 There's just 2 things that stand in your way before you can get cracking:
 
