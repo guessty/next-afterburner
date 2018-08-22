@@ -11,12 +11,12 @@ const prodConfig = {
 }
 
 const devConfig = {
-  apiKey: 'AIzaSyDCkUyo5ZcUuU25wYwOBu6rsCWKVjJF2lU',
-  authDomain: 'upkeep-dev.firebaseapp.com',
-  databaseURL: 'https://upkeep-dev.firebaseio.com',
-  projectId: 'upkeep-dev',
-  storageBucket: 'upkeep-dev.appspot.com',
-  messagingSenderId: '363617968883',
+  apiKey: '<api-key>',
+  authDomain: '<auth-domain>',
+  databaseURL: '<database-url',
+  projectId: '<project-id>',
+  storageBucket: '<storage-bucket>',
+  messagingSenderId: '<message-sender-id>',
 }
 
 const config = process.env.NODE_ENV === 'production'
