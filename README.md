@@ -1,6 +1,6 @@
-# next-firebase-starter
+# next-firestack
 
-A highly opinionated starter kit for rapid development of production sites.
+A highly opinionated boilerplate for rapid development of production sites using NextJS and Firebase.
 
 ## The Problem
 

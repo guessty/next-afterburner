@@ -19,7 +19,7 @@ const AppLayout = (props: IAppLayoutProps) => (
     <NavBar data-grid-area="nav" />
     <div data-grid-area="main">{props.children}</div>
     <Flex data-grid-area="footer" hAlign="center">
-      <h4>Afterburn Footer Area</h4>
+      <h4>Next Firestack Footer</h4>
     </Flex>
   </Grid> 
 )

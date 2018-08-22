@@ -1,7 +1,7 @@
 {
-  "name": "next-firebase-starter",
+  "name": "next-firestack",
   "version": "1.0.0",
-  "repository": "https://github.com/guessty/next-firebase-started.git",
+  "repository": "https://github.com/guessty/next-firestack.git",
   "author": "guessty <christian.guest@outlook.com>",
   "license": "MIT",
   "scripts": {

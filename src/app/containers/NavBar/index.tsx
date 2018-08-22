@@ -37,7 +37,7 @@ class NavBar extends React.PureComponent<INavBarProps, any> {
     return (
       <nav>
         <Flex direction="row" gutter="20px" incGutterEdges={true}>
-          <Router.Link to="/"><a>Afterburn</a></Router.Link>
+          <Router.Link to="/"><a>Next FireStack</a></Router.Link>
           <Router.Link to="/about"><a>About</a></Router.Link>
           <div data-flex-grow={true} />
           {
